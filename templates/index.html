@@ -1,0 +1,14 @@
+{% extends "_base.html" %}
+
+{% block body %}
+  <div class="container-narrow">
+
+    {% block navmenu %}
+      {% include 'nav/_menu.html' with context %}
+    {% endblock %}
+
+    {% block ix_page_home %}
+      {% include 'page/ix_home.html' with context %}
+    {% endblock %}
+  </div>
+{% endblock %}

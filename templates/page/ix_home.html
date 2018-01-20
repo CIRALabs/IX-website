@@ -1,0 +1,30 @@
+<div id="ix_homepage" class="current_page">
+  {% block titlegraph %}
+  <div class="jumbotron">
+    <h4>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</h4>
+
+    {% if jumbotron.graph %}
+    <img src="/graph/e_week.png">
+    {% endif %}
+  </div>
+  {% endblock %}
+
+  {% block ixp_questions %}
+  <div class="row-fluid marketing">
+
+  {% for qa in ix.home_questions %}{% set outer_loop = loop %}{% for question, answer in qa.items() %}
+    {% if (outer_loop.index is divisibleby 4 or outer_loop.index == 1) and loop.index == 1 %}
+    <div class="span6">
+    {% endif -%}
+
+
+    <h4>{{ question }}</h4>
+    <p>{{ answer }}</p>
+
+    {%- if (outer_loop.index == 3 or outer_loop.index is divisibleby 6) and loop.index == 2 %}
+    </div>
+    {% endif %}
+  {% endfor %}{% endfor %}
+  </div>
+  {% endblock %}
+</div>
