@@ -1,27 +1,31 @@
-<div class="masthead">
+<div id="ix-navmenu" class="masthead">
   <ul class="nav nav-pills pull-right">
-    <li class="active">
-      <a href="#">Home</a>
+    <li id="menu-li-home" class="menu-li">
+      <a id="menu-btn-home" href="#home">Home</a>
     </li>
-    <li>
-      <a href="/about.html">About</a>
+    <li id="menu-li-about" class="menu-li">
+      <a id="menu-btn-about" href="#about">About</a>
     </li>
-    <li>
-      <a href="/news.html">News</a>
+    <li id="menu-li-news" class="menu-li">
+      <a id="menu-btn-news" href="#news">News</a>
     </li>
-    <li>
-      <a href="/locations.html">Locations</a>
+    <li id="menu-li-locations" class="menu-li">
+      <a id="menu-btn-locations" href="#locations">Locations</a>
     </li>
-    <li>
-      <a href="/peers.html">Peers</a>
+    <li id="menu-li-peers" class="menu-li">
+      <a id="menu-btn-peers" href="#peers">Peers</a>
     </li>
-    <li>
-      <a href="/faq.html">FAQ</a>
+    <li id="menu-li-faq" class="menu-li">
+      <a id="menu-btn-faq" href="#faq">FAQ</a>
     </li>
-    <li>
-      <a href="/links.html">Links</a>
+    <li id="menu-li-links" class="menu-li">
+      <a id="menu-btn-links" href="#links">Links</a>
     </li>
   </ul>
+  {% if ix.use_logo %}
+  <img class="ix-logo" src="/static/img/logo.png"/>
+  {% else %}
   <h3 class="muted">{{ ix.shortname }}</h3>
+  {% endif %}
   <hr>
 </div>

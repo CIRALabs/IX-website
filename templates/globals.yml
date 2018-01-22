@@ -5,6 +5,7 @@ ix:
   url: "https://monctonix.ca"
   shortname: "MonctonIX"
   location: "Moncton"
+  use_logo: true
   peering_email: "peering@monctonix.ca"
   peeringdb_link: "https://peeringdb.com/fac/3785"
   home_questions:

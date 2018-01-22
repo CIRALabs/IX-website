@@ -7,32 +7,47 @@
       {% include 'nav/_menu.html' with context %}
     {% endblock %}
 
-    {% block ix_page_home %}
-      {% include 'page/ix_home.html' with context %}
-    {% endblock %}
+    <div id="ix-page-home" class="ix-page hidden">
+      {% block ix_page_home %}
+        {% include 'page/ix_home.html' with context %}
+      {% endblock %}
+    </div>
 
-    {% block ix_page_about %}
-      {% include 'page/ix_about.html' with context %}
-    {% endblock %}
+    <div id="ix-page-about" class="ix-page hidden">
+      {% block ix_page_about %}
+        {% include 'page/ix_about.html' with context %}
+      {% endblock %}
+    </div>
 
-    {% block ix_page_news %}
-      {% include 'page/ix_news.html' with context %}
-    {% endblock %}
+    <div id="ix-page-news" class="ix-page hidden">
+      {% block ix_page_news %}
+        {% include 'page/ix_news.html' with context %}
+      {% endblock %}
+    </div>
 
-    {% block ix_page_locations %}
-      {% include 'page/ix_locations.html' with context %}
-    {% endblock %}
-  
-    {% block ix_page_peers %}
-      {% include 'page/ix_peers.html' with context %}
-    {% endblock %}
+    <div id="ix-page-locations" class="ix-page hidden">
+      {% block ix_page_locations %}
+        {% include 'page/ix_locations.html' with context %}
+      {% endblock %}
+    </div>
 
-    {% block ix_page_faq %}
-      {% include 'page/ix_faq.html' with context %}
-    {% endblock %}
+    <div id="ix-page-peers" class="ix-page hidden">
+      {% block ix_page_peers %}
+        {% include 'page/ix_peers.html' with context %}
+      {% endblock %}
+    </div>
 
-    {% block ix_page_links %}
-      {% include 'page/ix_links.html' with context %}
-    {% endblock %}
+    <div id="ix-page-faq" class="ix-page hidden">
+      {% block ix_page_faq %}
+        {% include 'page/ix_faq.html' with context %}
+      {% endblock %}
+    </div>
+
+    <div id="ix-page-links" class="ix-page hidden">
+      {% block ix_page_links %}
+        {% include 'page/ix_links.html' with context %}
+      {% endblock %}
+    </div>
+
   </div>
 {% endblock %}

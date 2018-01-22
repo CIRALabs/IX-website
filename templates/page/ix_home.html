@@ -1,30 +1,56 @@
-<div id="ix_homepage" class="current_page">
-  {% block titlegraph %}
-  <div class="jumbotron">
-    <h4>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</h4>
+{% block titlegraph %}
+<div class="jumbotron">
+  <h4>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</h4>
 
-    {% if jumbotron.graph %}
-    <img src="/graph/e_week.png">
-    {% endif %}
-  </div>
-  {% endblock %}
-
-  {% block ixp_questions %}
-  <div class="row-fluid marketing">
-
-  {% for qa in ix.home_questions %}{% set outer_loop = loop %}{% for question, answer in qa.items() %}
-    {% if (outer_loop.index is divisibleby 4 or outer_loop.index == 1) and loop.index == 1 %}
-    <div class="span6">
-    {% endif -%}
-
-
-    <h4>{{ question }}</h4>
-    <p>{{ answer }}</p>
-
-    {%- if (outer_loop.index == 3 or outer_loop.index is divisibleby 6) and loop.index == 2 %}
-    </div>
-    {% endif %}
-  {% endfor %}{% endfor %}
-  </div>
-  {% endblock %}
+  {% if jumbotron.graph %}
+  <img src="/graph/e_week.png">
+  {% endif %}
 </div>
+{% endblock %}
+
+{% block ixp_questions %}
+<div class="row-fluid marketing">
+  <div class="span6">
+        <h4>What is an Internet Exchange?</h4>
+        <p>An IX (Internet Exchange) allows networks to interconnect on an open-access 
+        ethernet fabric -- providing low-latency, high-bandwidth, cost-effectively, in a locale.</p>
+        
+        <h4>What is the benefit?</h4>
+        <p>Networks can exchange traffic faster and better. 
+        ISPs, transit providers, DNS services,
+        and content networks will congregate -- 
+        it is sensible to interconnect locally.
+        </p>
+
+        <h4>How is traffic exchanged?</h4>
+        <p>
+        Traffic exchange is facilitated by BGP (Border Gateway Protocol).
+        Networks must have an AS (Autonomous System) number to announce their routes to each other.
+        </p>
+
+      </div>
+      <div class="span6">
+
+        <h4>Where is MonctonIX?</h4>
+        <p>The MonctonIX switch is located at Fibre Center,
+        770 St George Blvd, Moncton, New Brunswick, E1E 2C6, Canada.</p>
+        <p>PeeringDB: <a href='https://peeringdb.com/fac/3785'>https://peeringdb.com/fac/3785 </a>
+        </p>
+
+        <h4>How much does it cost?</h4>
+        <p>
+        Connecting at the locations
+        is subject to agreements with the facilities,
+        but participation is free until 2019.
+        </p>
+
+        <h4>How do we join?</h4>
+        <p>
+        Please read the FAQ (URL to fact) and if this is suitable extend 
+        your network into the MonctonIX location please contact 
+        <a href='mailto:info@monctonix.ca'>info@monctonix.ca</a> to connect.
+        Inquiries will be held confidential.</p>
+
+    </div>
+</div>
+{% endblock %}

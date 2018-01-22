@@ -43,3 +43,13 @@ body {
 .marketing p+h4 {
     margin-top: 28px;
 }
+
+.ix-logo {
+    max-width: 130px;
+    max-height: 30px;
+}
+/* .ix-page {
+    top: 5em;
+    position: absolute;
+    max-width: inherit;
+} */
