@@ -1,0 +1,15 @@
+{%- macro js(load_from_static, src='', type='text/javascript') -%}
+  {%- if load_from_static -%}
+    <script src="/static/{{ src }}", type = "{{ type }}"></script>
+  {%- else -%}
+    <script src="{{ src }}", type = "{{ type }}"></script>
+  {%- endif -%}
+{%- endmacro -%}
+
+{%- macro link(load_from_static, href='', rel='stylesheet') -%}
+  {%- if load_from_static -%}
+    <link href="/static/{{ href }}", rel = "{{ rel }}">
+  {%- else -%}
+    <link href="{{ href }}", rel = "{{ rel }}">
+  {%- endif -%}
+{%- endmacro -%} 

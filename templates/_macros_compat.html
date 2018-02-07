@@ -1,0 +1,11 @@
+{%- macro ie9_js(load_from_static, src='', type='text/javascript') -%}
+  {% raw %}
+    <!--[if lt IE 9]>
+  {% endraw %}
+    {%- if load_from_static -%}
+        {{ m_res_import.js(true, "{{ src }}", type = "{{ type }}") }}  
+    {%- else -%}
+      {{ m_res_import.js(false, "{{ src }}", type = "{{ type }}") }}
+    {%- endif -%}
+  <![endif]-->
+{%- endmacro -%}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ ix.shortname }}: {{ ix.location }} Internet Exchange Website">
+    <meta name="author" content="{{ ix.shortname }} - CIRA - CIRA Labs">
+    
+
+    {% block css %}
+      {{ m_res_import.link(true, "css/bootstrap.css") }}
+      {{ m_res_import.link(true, "css/bootstrap-responsive.css") }}
+      {{ m_res_import.link(true, "css/ix.css") }}
+    {% endblock %}
+
+
+    {# end IE9 compat #}
+    {{ m_compat.ie9_js(false, "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js") }}
+    {# end IE9 compat #}
+    
+    {% include '_icons.html' %}
+
+  </head>
+
+  <body>
+    {% block body %}
+    {% endblock %}
+    
+    {% block js %}
+      {{ m_res_import.js(true, "js/jquery.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-transition.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-alert.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-modal.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-dropdown.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-scrollspy.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-tab.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-tooltip.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-popover.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-button.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-collapse.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-carousel.js") }}
+      {{ m_res_import.js(true, "js/bootstrap-typeahead.js") }}
+      {{ m_res_import.js(true, "js/ix-navbar.js") }}
+      {{ m_res_import.js(true, "js/ix.js") }}
+    {% endblock %}
+  </body>
+
+</html>

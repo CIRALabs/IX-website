@@ -6,10 +6,8 @@ ix:
   peering_email: "peering@monctonix.ca"
   peeringdb_link: "https://peeringdb.com/fac/3785"
 
-
-ix_pages:
-
-
+ix_pages: 
+  
   ix_home:
     heeader_element:
       center_ix_display:
@@ -54,15 +52,15 @@ ix_pages:
           - "Uri LItvinenko"
 
       about_elem_three: 
-        title: "<a href="https://github.com/CIRALabs/IX-website">IX-website</a>  development & design:"
+        title: "<a href='https://github.com/CIRALabs/IX-website'>IX-website</a>  development & design:"
         credits:
-          - "<a href="https://github.com/lstn ">Lucas Estienne</a> / CIRA Labs"
+          - "<a href='https://github.com/lstn '>Lucas Estienne</a> / CIRA Labs"
 
       about_elem_four:
         title: "Special Thanks"
         credits:
-         - "Theo de Raadt for his work on developing the original web template for YYCIX and inspiring the <a href="https://github.com/CIRALabs/IX-website">IX-website</a> project."
-         - "<a href="https://tympanus.net/codrops/licensing/">Phi Rhythmatus / Codrops </a> or the excellent free of charge & use Bootstrap template used as a base for this. They do not require a link back or footer credits but they deserve a special thanks for making a neat bootstrap 3 theme!"
+         - "Theo de Raadt for his work on developing the original web template for YYCIX and inspiring the <a href='https://github.com/CIRALabs/IX-website'>IX-website</a> project."
+         - "<a href='https://tympanus.net/codrops/licensing/'>Phi Rhythmatus / Codrops </a> or the excellent free of charge & use Bootstrap template used as a base for this. They do not require a link back or footer credits but they deserve a special thanks for making a neat bootstrap 3 theme!"
 
 
   ix_location:
