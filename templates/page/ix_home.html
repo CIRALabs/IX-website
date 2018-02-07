@@ -1,8 +1,8 @@
 {% block titlegraph %}
-<div class="jumbotron">
+<div class="center-ix-display">
   <h4>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</h4>
 
-  {% if jumbotron.graph %}
+  {% if ix_pages.ix_home.heeader_element.center_ix_display.graph %}
   <img src="/graph/e_week.png">
   {% endif %}
 </div>
@@ -34,7 +34,7 @@
         <h4>Where is MonctonIX?</h4>
         <p>The MonctonIX switch is located at Fibre Center,
         770 St George Blvd, Moncton, New Brunswick, E1E 2C6, Canada.</p>
-        <p>PeeringDB: <a href='https://peeringdb.com/fac/3785'>https://peeringdb.com/fac/3785 </a>
+        <p>PeeringDB: <a href='{{ ix.peeringdb_link }}'>{{ ix.peeringdb_link}} </a>
         </p>
 
         <h4>How much does it cost?</h4>

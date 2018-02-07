@@ -18,17 +18,17 @@ body {
 
 /* Main marketing message and sign up button */
 
-.jumbotron {
+.center-ix-display {
     margin: 20px 0;
     text-align: center;
 }
 
-.jumbotron h1 {
+.center-ix-display h1 {
     font-size: 72px;
     line-height: 1;
 }
 
-.jumbotron .btn {
+.center-ix-display .btn {
     font-size: 21px;
     padding: 14px 24px;
 }
