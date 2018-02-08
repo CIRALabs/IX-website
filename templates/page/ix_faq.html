@@ -3,106 +3,106 @@
 
   <h4>How do we contact {{ ix.shortname }}?</h4>
   <p>Send email to <a href="mailto:info@monctonix.ca">info@monctonix.ca</a> for any issues.
-      All inquiries will be held confidential.</p>
+	  All inquiries will be held confidential.</p>
 
-      <h4>What speeds are supported?</h4>
-      <p>The preferred choice of connection will depend upon the location. 
-      Typical connections are 1Gb & 10Gb (SFP based). 
-      Please contact us for information on other port speeds.</p>
+	  <h4>What speeds are supported?</h4>
+	  <p>The preferred choice of connection will depend upon the location. 
+	  Typical connections are 1Gb & 10Gb (SFP based). 
+	  Please contact us for information on other port speeds.</p>
 
-      <h4>What other services can we pickup at the {{ ix.shortname }} locations?</h4>
-      <p>We would be happy to discuss once we are up and running.</p>
+	  <h4>What other services can we pickup at the {{ ix.shortname }} locations?</h4>
+	  <p>We would be happy to discuss once we are up and running.</p>
 
-      <h4>How much do ports cost?</h4>
-      <p>1Gbps and 10Gbps connections are free for 2018.
-      In 2019, we anticipate $1200/year with a one-time setup fee of $250 
-      which includes an SPF and patch cable. 
-      For connection speeds faster than 10Gbps please email us at <a href="mailto:info@monctonix.ca">info@monctonix.ca</a>.</p>  
+	  <h4>How much do ports cost?</h4>
+	  <p>1Gbps and 10Gbps connections are free for 2018.
+	  In 2019, we anticipate $1200/year with a one-time setup fee of $250 
+	  which includes an SPF and patch cable. 
+	  For connection speeds faster than 10Gbps please email us at <a href="mailto:info@monctonix.ca">info@monctonix.ca</a>.</p>  
 
-      <h4>How do we donate to {{ ix.shortname }}?</h4>
-      <p>{{ ix.shortname }} was built upon donations. We are very interested in receiving SFP optics,
-      switches, or money to continue our work.
-      We have listed our contributors on a seperate page  along with ways of donating.</p>
+	  <h4>How do we donate to {{ ix.shortname }}?</h4>
+	  <p>{{ ix.shortname }} was built upon donations. We are very interested in receiving SFP optics,
+	  switches, or money to continue our work.
+	  We have listed our contributors on a seperate page  along with ways of donating.</p>
 
-      <h4>Does this operate like an ISP?</h4>
-      <p>Internet Exchanges are not ISPs (Internet Service Providers). 
-      No traffic, bandwidth or other services are being sold by {{ ix.shortname }}.</p>
+	  <h4>Does this operate like an ISP?</h4>
+	  <p>Internet Exchanges are not ISPs (Internet Service Providers). 
+	  No traffic, bandwidth or other services are being sold by {{ ix.shortname }}.</p>
 
-      <p>The simple, noble goal is to create a meeting place where Eastern 
-      Canadian networks can directly exchange some of their traffic efficiently
-      on an ethernet switch without additional costs.</p>
+	  <p>The simple, noble goal is to create a meeting place where Eastern 
+	  Canadian networks can directly exchange some of their traffic efficiently
+	  on an ethernet switch without additional costs.</p>
 
-      <p>Many Internet Service Providers provide their services at 
-      the locations where {{ ix.shortname }} has switches. {{ ix.shortname }} does not intend to compete
-      with the internet service providers, but instead complement their services to 
-      improve local Internet performance.</p>
+	  <p>Many Internet Service Providers provide their services at 
+	  the locations where {{ ix.shortname }} has switches. {{ ix.shortname }} does not intend to compete
+	  with the internet service providers, but instead complement their services to 
+	  improve local Internet performance.</p>
 
-      <h4>What limitations are there on traffic?</h4>
-      <p>
-      Similar to AMS-IX and TORIX, the switch ports are configured with a
-      variety of port-security features so that one peer cannot damage
-      another's experience.  If port-security is triggered, the port
-      will appear "dead" for a little while.</p>
-      <ul>
-      <li>Peers may place only a single MAC address on their port.  Use
-          of more MAC addresses may trigger port-security features.
-      <li>Only ARP, IPv4, and IPv6 traffic are allowed.  Other traffic
-          may trigger port-security features.
-      <li>Only one layer-3 router allowed per port.
-      <li>The peering router must speak BGP.
-      <li>Peers may speak BGP directly between each other.
-      <li>Additionally, two {{ ix.shortname }}-operated BGP route servers are available
-          to share routes in a easy and simple fashion.  As at other IX, these
-          route servers operate using a feature called <b>AS transparency</b> --
-          they do not prepend their own AS to the AS_PATH on the reflected
-          routes, thus creating shorter (better) paths
+	  <h4>What limitations are there on traffic?</h4>
+	  <p>
+	  Similar to AMS-IX and TORIX, the switch ports are configured with a
+	  variety of port-security features so that one peer cannot damage
+	  another's experience.  If port-security is triggered, the port
+	  will appear "dead" for a little while.</p>
+	  <ul>
+	  <li>Peers may place only a single MAC address on their port.  Use
+		  of more MAC addresses may trigger port-security features.
+	  <li>Only ARP, IPv4, and IPv6 traffic are allowed.  Other traffic
+		  may trigger port-security features.
+	  <li>Only one layer-3 router allowed per port.
+	  <li>The peering router must speak BGP.
+	  <li>Peers may speak BGP directly between each other.
+	  <li>Additionally, two {{ ix.shortname }}-operated BGP route servers are available
+		  to share routes in a easy and simple fashion.  As at other IX, these
+		  route servers operate using a feature called <b>AS transparency</b> --
+		  they do not prepend their own AS to the AS_PATH on the reflected
+		  routes, thus creating shorter (better) paths
 <a href="http://tools.ietf.org/html/draft-ietf-idr-ix-bgp-route-server-02#section-2.2.2">(IETF description)</a>.
-          The session to the route servers should be configured to accept
-          this situation, typically with a vendor-specific option such as
-          "no bgp enforce-first-as"
-          <a href="http://www.cisco.com/en/US/docs/ios/ios_xe/iproute_bgp/configuration/guide/irg_route_server_xe.html#wp1059883">
-          (Cisco IOS, Cisco IOS-XE)</a>,
-          "bgp enforce-first-as disable" (Cisco IOS-XR),
-          "no bgp-enforce-first-as" (Quagga and family),
-          "enforce neighbor-as no" (OpenBGPD), etc</a>.
-      </ul>
-      <p>
+		  The session to the route servers should be configured to accept
+		  this situation, typically with a vendor-specific option such as
+		  "no bgp enforce-first-as"
+		  <a href="http://www.cisco.com/en/US/docs/ios/ios_xe/iproute_bgp/configuration/guide/irg_route_server_xe.html#wp1059883">
+		  (Cisco IOS, Cisco IOS-XE)</a>,
+		  "bgp enforce-first-as disable" (Cisco IOS-XR),
+		  "no bgp-enforce-first-as" (Quagga and family),
+		  "enforce neighbor-as no" (OpenBGPD), etc</a>.
+	  </ul>
+	  <p>
 
-      These requirements are not unique to {{ ix.shortname }}.  The introductions and
-      sample configurations at
-      <a href="https://www.ams-ix.net/technical/specifications-descriptions">
-      AMS-IX</a> or
-      <a href="http://www.swissix.ch/participation/equipment-configuration-bpg">
-      SWISSIX</a>, or other internet exchanges can be valuable.
-      Our operators will help peers, and hope to provide samples of
-      our own in the future.</p>
+	  These requirements are not unique to {{ ix.shortname }}.  The introductions and
+	  sample configurations at
+	  <a href="https://www.ams-ix.net/technical/specifications-descriptions">
+	  AMS-IX</a> or
+	  <a href="http://www.swissix.ch/participation/equipment-configuration-bpg">
+	  SWISSIX</a>, or other internet exchanges can be valuable.
+	  Our operators will help peers, and hope to provide samples of
+	  our own in the future.</p>
 
-      <h4>Are there any rules?</h4><p>
-      The internet exchange switch is a fabric shared by all peers.
-      Peers must avoid doing anything which might overload the fabric,
-      mis-direct traffic, or otherwise cause harm to any other peers.  If
-      a peer shows a willful disregard for others, they will be
-      disconnected by the operators.  The full set of
-      <a href="#rules">Exchange Participation Rules</a> are published.</p>
-      <p>
-      While not a rule, we request that peers register themselves
-      with <a href="http://peeringdb.com/">http://peeringdb.com</a>, because
-      visibility there will encourage other networks to join as well,
-      bringing more benefit to all.</p>
+	  <h4>Are there any rules?</h4><p>
+	  The internet exchange switch is a fabric shared by all peers.
+	  Peers must avoid doing anything which might overload the fabric,
+	  mis-direct traffic, or otherwise cause harm to any other peers.  If
+	  a peer shows a willful disregard for others, they will be
+	  disconnected by the operators.  The full set of
+	  <a href="#rules">Exchange Participation Rules</a> are published.</p>
+	  <p>
+	  While not a rule, we request that peers register themselves
+	  with <a href="http://peeringdb.com/">http://peeringdb.com</a>, because
+	  visibility there will encourage other networks to join as well,
+	  bringing more benefit to all.</p>
 
-      <h4>What is the process for getting connected?</h4><p>
-      Send us an email telling us about your network and requesting a port.
-      All inquiries will be held confidential.</p>
-      <p>
-      Please see our <a onclick="$('#menu-btn-locations').click()" href="#locations">Locations list</a> for
-      datacenter contact information to make arrangements for a cross-connect.</p>
+	  <h4>What is the process for getting connected?</h4><p>
+	  Send us an email telling us about your network and requesting a port.
+	  All inquiries will be held confidential.</p>
+	  <p>
+	  Please see our <a onclick="$('#menu-btn-locations').click()" href="#locations">Locations list</a> for
+	  datacenter contact information to make arrangements for a cross-connect.</p>
 
 
-      <h4>What other services can we expect?</h4><p>
-      No other services at available at this time.
-      </p>
+	  <h4>What other services can we expect?</h4><p>
+	  No other services at available at this time.
+	  </p>
 
-      </div>
+	  </div>
 
-    </div>
+	</div>
 {% endblock %}

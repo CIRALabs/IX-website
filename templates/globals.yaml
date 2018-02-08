@@ -9,27 +9,27 @@ ix:
 ix_pages: 
   
   ix_home:
-    heeader_element:
+    header_element:
       center_ix_display:
         graph: false
 
     body_element:
       questions_answers:
-        questions:
-          leftside:
+        - leftside:
+          side_one:
             what_is_ix: "What is an Internet Exchange?"
             what_is_benefit: "What is the benefit?"
             how_traffic_exchanged: "How is traffic exchanged?"
-          rightside:
+          side_two:
             where_is_ix: "Where is MonctonIX?"
             cost: "How much does it cost?"
             how_to_join: "How do we join?"
-        answers:
-          leftside:
+        - rightside:
+          side_one:
             what_is_ix: "An IX (Internet Exchange) allows networks to interconnect on an open-access ethernet fabric -- providing low-latency, high-bandwidth, cost-effectively, in a locale."
             what_is_benefit: "Networks can exchange traffic faster and better. ISPs, transit providers, DNS services, and content networks will congregate -- it is sensible to interconnect locally."
             how_traffic_exchanged: "Traffic exchange is facilitated by BGP (Border Gateway Protocol). Networks must have an AS (Autonomous System) number to announce their routes to each other."
-          rightside:
+          side_two:
             where_is_ix: "The MonctonIX switch is located at Fibre Center, 770 St George Blvd, Moncton, New Brunswick, E1E 2C6, Canada.</p><p>PeeringDB: <a href='https://peeringdb.com/fac/3785' />"
             cost: "Connecting at the locations is subject to agreements with the facilities, but participation is free until 2019."
             how_to_join: "Please read the FAQ (URL to fact) and if this is suitable extend your network into the MonctonIX location please contact <a href='mailto:info@monctonix.ca'>info@monctonix.ca</a> to connect.  Inquiries will be held confidential."

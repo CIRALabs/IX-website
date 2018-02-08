@@ -1,12 +1,13 @@
+{% filter indent(2) %}
 <!DOCTYPE html>
 <html lang="en">
 
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{ ix.shortname }}: {{ ix.location }} Internet Exchange Website">
-    <meta name="author" content="{{ ix.shortname }} - CIRA - CIRA Labs">
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</title>
+      {{ m_res_import.meta(false, "width=device-width, initial-scale=1.0", "viewport") }}
+      <meta name="description" content="{{ ix.shortname }}: {{ ix.location }} Internet Exchange Website">
+      <meta name="author" content="{{ ix.shortname }} - CIRA - CIRA Labs">
     
 
     {% block css %}
@@ -20,7 +21,27 @@
     {{ m_compat.ie9_js(false, "https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js") }}
     {# end IE9 compat #}
     
-    {% include '_icons.html' %}
+    
+    {% block icons %}
+      {{ m_res_import.link(true, "ico/apple-icon-57x57.png", "apple-touch-icon", "57x57") }}
+      {{ m_res_import.link(true, "ico/apple-icon-60x60.png", "apple-touch-icon", "60x60") }}
+      {{ m_res_import.link(true, "ico/apple-icon-72x72.png", "apple-touch-icon", "72x72") }}
+      {{ m_res_import.link(true, "ico/apple-icon-76x76.png", "apple-touch-icon", "72x72") }}
+      {{ m_res_import.link(true, "ico/apple-icon-114x114.png", "apple-touch-icon", "114x114") }}
+      {{ m_res_import.link(true, "ico/apple-icon-120x120.png", "apple-touch-icon", "120x120") }}
+      {{ m_res_import.link(true, "ico/apple-icon-144x144.png", "apple-touch-icon", "144x144") }}
+      {{ m_res_import.link(true, "ico/apple-icon-152x152.png", "apple-touch-icon", "152x152") }}
+      {{ m_res_import.link(true, "ico/apple-icon-180x180.png", "apple-touch-icon", "180x180") }}
+      {{ m_res_import.link(true, "ico/android-icon-192x192.png", "icon", "192x192", "image/png") }}
+      {{ m_res_import.link(true, "ico/favicon-32x32.png", "icon", "32x32", "image/png") }}
+      {{ m_res_import.link(true, "ico/favicon-96x96.png", "icon", "96x96", "image/png") }}
+      {{ m_res_import.link(true, "ico/favicon-16x16.png", "icon", "16x16", "image/png") }}
+      {{ m_res_import.link(true, "ico/manifest.json", "manifest") }}
+
+      {{ m_res_import.meta(false, "#ffffff", "msapplication-TileColor") }}
+      {{ m_res_import.meta(true, "ico/ms-icon-144x144.png", "msapplication-TileImage") }}
+      {{ m_res_import.meta(false, "#ffffff", "theme-color") }}
+    {% endblock %}
 
   </head>
 
@@ -48,3 +69,4 @@
   </body>
 
 </html>
+{% endfilter %}

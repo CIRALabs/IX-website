@@ -6,10 +6,30 @@
   {%- endif -%}
 {%- endmacro -%}
 
-{%- macro link(load_from_static, href='', rel='stylesheet') -%}
+{%- macro link(load_from_static, href='', rel='stylesheet', sizes='', type='') -%}
   {%- if load_from_static -%}
-    <link href="/static/{{ href }}", rel = "{{ rel }}">
+    {%- if rel in ['stylesheet', 'manifest'] -%}
+      <link href="/static/{{ href }}", rel = "{{ rel }}">
+    {%- elif rel in ['apple-touch-icon'] -%}
+      <link href="/static/{{ href }}", sizes = "{{ sizes }}", rel = "{{ rel }}">
+    {%- elif rel in ['icon'] -%}
+      <link href="/static/{{ href }}", type = "{{ type }}" sizes = "{{ sizes }}", rel = "{{ rel }}">
+    {%- endif -%}
   {%- else -%}
-    <link href="{{ href }}", rel = "{{ rel }}">
+    {%- if rel in ['stylesheet', 'manifest'] -%}
+      <link href="{{ href }}", rel = "{{ rel }}">
+    {%- elif rel in ['apple-touch-icon'] -%}
+      <link href="{{ href }}", sizes = "{{ sizes }}", rel = "{{ rel }}">
+    {%- elif rel in ['icon'] -%}
+      <link href="{{ href }}", type = "{{ type }}" sizes = "{{ sizes }}", rel = "{{ rel }}">
+    {%- endif -%}
+  {%- endif -%}
+{%- endmacro -%} 
+
+{%- macro meta(load_from_static, content='', name='') -%}
+  {%- if load_from_static -%}
+    <script content="/static/{{ content }}", name = "{{ name }}"></script>
+  {%- else -%}
+    <script src="{{ content }}", name = "{{ name }}"></script>
   {%- endif -%}
 {%- endmacro -%} 
