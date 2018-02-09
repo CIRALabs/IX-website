@@ -14,7 +14,22 @@ ix_pages:
         graph: false
 
     body_element:
-      questions_answers:
+      qa_elems_num: 6
+      questions_answers_v1:
+        - "<h4>What is an Internet Exchange?</h4>
+           <p>An IX (Internet Exchange) allows networks to interconnect on an open-access ethernet fabric -- providing low-latency, high-bandwidth, cost-effectively, in a locale.</p>"
+        - "<h4>What is the benefit?</h4>
+           <p>Networks can exchange traffic faster and better. ISPs, transit providers, DNS services, and content networks will congregate -- it is sensible to interconnect locally.</p>"
+        - "<h4>How is traffic exchanged?</h4>
+           <p>Traffic exchange is facilitated by BGP (Border Gateway Protocol). Networks must have an AS (Autonomous System) number to announce their routes to each other.</p>"
+        - "<h4>Where is MonctonIX?</h4>
+           <p>The MonctonIX switch is located at Fibre Center, 770 St George Blvd, Moncton, New Brunswick, E1E 2C6, Canada.</p>
+           <p>PeeringDB: <a href='https://peeringdb.com/fac/3785' /></p>"
+        - "<h4>How much does it cost?</h4>
+           <p>Connecting at the locations is subject to agreements with the facilities, but participation is free until 2019.</p>"
+        - "<h4>How do we join?</h4>
+           <p>Please read the FAQ (URL to fact) and if this is suitable extend your network into the MonctonIX location please contact <a href='mailto:info@monctonix.ca'>info@monctonix.ca</a> to connect.  Inquiries will be held confidential.</p>"
+      questions_answers_v2:
         - leftside:
           side_one:
             what_is_ix: "What is an Internet Exchange?"
@@ -52,7 +67,7 @@ ix_pages:
           - "Uri LItvinenko"
 
       about_elem_three: 
-        title: "<a href='https://github.com/CIRALabs/IX-website'>IX-website</a>  development & design:"
+        title: "<a href='https://github.com/CIRALabs/IX-website'>IX-website</a>  development &amp; design:"
         credits:
           - "<a href='https://github.com/lstn '>Lucas Estienne</a> / CIRA Labs"
 
@@ -60,7 +75,7 @@ ix_pages:
         title: "Special Thanks"
         credits:
          - "Theo de Raadt for his work on developing the original web template for YYCIX and inspiring the <a href='https://github.com/CIRALabs/IX-website'>IX-website</a> project."
-         - "<a href='https://tympanus.net/codrops/licensing/'>Phi Rhythmatus / Codrops </a> or the excellent free of charge & use Bootstrap template used as a base for this. They do not require a link back or footer credits but they deserve a special thanks for making a neat bootstrap 3 theme!"
+         - "<a href='https://tympanus.net/codrops/licensing/'>Phi Rhythmatus / Codrops </a> or the excellent free of charge &amp; use Bootstrap template used as a base for this. They do not require a link back or footer credits but they deserve a special thanks for making a neat bootstrap 3 theme!"
 
 
   ix_location:

@@ -11,9 +11,25 @@
 {% block ixp_questions %}
 <div class="row-fluid marketing">
 
-  {% set qkeys = [] %}
+  <div class="span6">
+  {%- for qa in ix_pages.ix_home.body_element.questions_answers_v1 %}
+    {{ qa }}
+    {%- if loop.index0 == 2 %}
 
-  {% for side in ix_pages.ix_home.body_element.questions_answers %}
+    </div>
+    <div class="span6">
+    
+    {% endif -%}
+  {% endfor -%}
+  {%- if true %}
+
+    </div>
+
+  {% endif -%}
+  
+  {# {% set qkeys = [] %} #}
+
+  {# for side in ix_pages.ix_home.body_element.questions_answers %}
     
     {%- for _side in [side['side_one'], side['side_two']]  -%}
         <div class="to-delete hidden">{{- qkeys.append(_side) -}}</div>
@@ -21,16 +37,19 @@
     {#- for _side in side['side_two'] -%}
       <div class="to-delete hidden">{{- qkeys_two.append(_side) -}}</div>
     {%- endfor -#}
-  {% endfor %}
+  {# {% endfor %} #}
   
   {# for qkey in qkeys_one %}
     <h4>{{ ix_pages.ix_home.body_element.questions_answers.pop()['leftside']['side_one']['questions'][qkey]}}</h4>
   {% endfor #}
   
+  {#
   <p>{{ qkeys[0] }}</p>
   <p>{{ qkeys[1] }}</p>
   <p>{{ qkeys[2] }}</p>
-  <p>{{ qkeys[3] }}</p>
+  <p>{{ qkeys[3] }}</p> #}
+
+
   {#<div class="span6">
     <h4>What is an Internet Exchange?</h4>
     <p>An IX (Internet Exchange) allows networks to interconnect on an open-access 

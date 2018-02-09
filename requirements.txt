@@ -1,2 +1,2 @@
 hug==2.3.2
-git+https://github.com/dzervas/staticjinja.git@b5f40d5
+staticjinja2
