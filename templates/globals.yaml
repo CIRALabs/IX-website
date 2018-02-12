@@ -8,12 +8,11 @@ ix:
   layout_version: 2
 
 ix_pages: 
-  
   ix_home:
     header_element:
       center_ix_display:
         graph: false
-
+        
     body_element:
       qa_elems_num: 6
       questions_answers_v1:

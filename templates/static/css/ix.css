@@ -49,7 +49,7 @@ html {
 }
 
 .ix-page {
-    top: 7.7em;
+    top: 8em;
     position: relative;
 } 
 
@@ -57,11 +57,11 @@ html {
     margin-left: 0.85em !important;
     border-radius: 15px;
     background: rgba(0, 0, 0, 0.2) !important;
-    color: rgb(0, 136, 204) !important;
+    color: rgb(190, 51, 54) !important;
 }
 
 .menu-li.active {
-    background: rgba(0, 136, 204, 0.9) !important;
+    background: rgba(190, 51, 54, 0.98) !important;
     color: rgb(255,255,255) !important;
 }
 

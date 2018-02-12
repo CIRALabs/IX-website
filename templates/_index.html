@@ -11,20 +11,14 @@
     
     
       {% block css %}
-        {%- if ix.layout_version != 2 -%} {# LOAD VERSION 1 CSS #}
-          {{ m_res_import.link(true, "css/bootstrap.css") }}
-          {{ m_res_import.link(true, "css/bootstrap-responsive.css") }}
-          {{ m_res_import.link(true, "css/ix.css") }}
-        {%- else -%} {# LOAD NEW LAYOUT CSS #}
-          {{ m_res_import.link(true, "css/normalize.cardio.css") }}
-          {{ m_res_import.link(true, "css/bootstrap.cardio.css") }}
-          {{ m_res_import.link(true, "css/owl.cardio.css") }}
-          {{ m_res_import.link(true, "css/animate.cardio.css") }}
-          {{ m_res_import.link(true, "fonts/font-awesome-4.1.0/css/font-awesome.min.css") }}
-          {{ m_res_import.link(true, "fonts/eleganticons/et-icons.css") }}
-          {{ m_res_import.link(true, "css/cardio.css") }}
-          {{ m_res_import.link(true, "css/ix.css") }}
-        {%- endif -%}
+        {{ m_res_import.link(true, "css/normalize.cardio.css") }}
+        {{ m_res_import.link(true, "css/bootstrap.cardio.css") }}
+        {{ m_res_import.link(true, "css/owl.cardio.css") }}
+        {{ m_res_import.link(true, "css/animate.cardio.css") }}
+        {{ m_res_import.link(true, "fonts/font-awesome-4.1.0/css/font-awesome.min.css") }}
+        {{ m_res_import.link(true, "fonts/eleganticons/et-icons.css") }}
+        {{ m_res_import.link(true, "css/cardio.css") }}
+        {{ m_res_import.link(true, "css/ix.css") }}
       {% endblock %}
     
 
@@ -61,33 +55,15 @@
     {% endblock %}
     
     {% block js %}
-      {%- if ix.layout_version != 2 -%} {# LOAD VERSION 1 JS #}
-        {{ m_res_import.js(true, "js/jquery.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-transition.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-alert.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-modal.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-dropdown.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-scrollspy.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-tab.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-tooltip.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-popover.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-button.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-collapse.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-carousel.js") }}
-        {{ m_res_import.js(true, "js/bootstrap-typeahead.js") }}
-        {{ m_res_import.js(true, "js/ix-navbar.js") }}
-        {{ m_res_import.js(true, "js/ix.js") }}
-      {%- else -%} {# LOAD NEW LAYOUT JS #}
-        {{ m_res_import.js(true, "js/cardio.jquery-1.11.1.min.js") }}
-        {{ m_res_import.js(true, "js/cardio.owl.carousel.min.js") }}
-        {{ m_res_import.js(true, "js/cardio.bootstrap.min.js") }}
-        {{ m_res_import.js(true, "js/cardio.wow.min.js") }}
-        {{ m_res_import.js(true, "js/cardio.typewriter.js") }}
-        {{ m_res_import.js(true, "js/cardio.jquery.onepagenav.js") }}
-        {{ m_res_import.js(true, "js/cardio.main.js") }}
-        {{ m_res_import.js(true, "js/ix-navbar.js") }}
-        {{ m_res_import.js(true, "js/ix.js") }}
-      {%- endif -%}
+      {{ m_res_import.js(true, "js/cardio.jquery-1.11.1.min.js") }}
+      {{ m_res_import.js(true, "js/cardio.owl.carousel.min.js") }}
+      {{ m_res_import.js(true, "js/cardio.bootstrap.min.js") }}
+      {{ m_res_import.js(true, "js/cardio.wow.min.js") }}
+      {{ m_res_import.js(true, "js/cardio.typewriter.js") }}
+      {{ m_res_import.js(true, "js/cardio.jquery.onepagenav.js") }}
+      {{ m_res_import.js(true, "js/cardio.main.js") }}
+      {{ m_res_import.js(true, "js/ix-navbar.js") }}
+      {{ m_res_import.js(true, "js/ix.js") }}
     {% endblock %}
   </body>
 
