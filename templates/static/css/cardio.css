@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700);
 body {
 	font-family: 'Roboto', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
 	font-size: 14px;
@@ -112,10 +112,7 @@ ul.white-list li:before {
 header {
 	position: relative;
 	width: 100%;
-	color: white;
-	background: rgba(28, 36, 65, 0.93);
-	background: url('../img/header.jpg');
-	background-size: cover;
+	background: url('../img/grid.png') repeat-x, rgba(28, 36, 65, 0.07);
 }
 
 header .table {
@@ -131,7 +128,6 @@ header .header-text {
 	display: table-cell;
 	text-align: center;
 	vertical-align: middle;
-	color: white;
 }
 
 header .typed {
@@ -169,16 +165,18 @@ nav.navbar {
 	transition: all 0.3s ease;
 }
 
+/*
 nav.navbar .navbar-nav li.active a:not(.btn) {
-	color: #00a8ff !important;
+	 color: #00a8ff !important; 
 }
+*/
 
 nav.navbar-fixed-top {
 	z-index: 9499;
 	top: 0;
 	padding: 25px 0;
 	opacity: 0;
-	background: white;
+	background: url('../img/grid.png') repeat-x, rgba(28, 36, 65, 0.99);
 	box-shadow: 0px 4px 3px rgba(0, 0, 0, 0.05);
 }
 

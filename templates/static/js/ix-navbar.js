@@ -3,7 +3,7 @@ var ixNav = (function () {
     var _parentDiv, _navbardiv;
     
     var init = function () {
-        _navbarDiv = document.getElementsByClassName("masthead")[0]
+        _navbarDiv = document.getElementsByClassName("container-narrow-anchor")[0]
         _parentDiv = _navbarDiv.parentNode
         _initListeners();
         switchToContentPage(window.location.pathname);
@@ -30,19 +30,19 @@ var ixNav = (function () {
         );
 
         if (_isOnExistingPage) {
-            _btn_id = "#menu-li-" + _loc;
+            _btn_id = ".menu-li-" + _loc;
             _page_ix_id = "#ix-page-" + _loc;
             _navTo(_page_ix_id, _btn_id);
         } else {
-            _navTo("#menu-li-home", "#ix-page-home");
+            _navTo(".menu-li-home", "#ix-page-home");
         }
     };
 
     var _initListeners = function() {
         $.each(_navLocations, function(i, val){
-            $("#menu-btn-" + val).click(function() {
+            $(".menu-btn-" + val).click(function() {
                 _navAway(200)
-                _navTo("#menu-li-" + val, "#ix-page-" + val);
+                _navTo(".menu-li-" + val, "#ix-page-" + val);
             });
         });
     };

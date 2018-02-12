@@ -1,8 +1,7 @@
-body {
-    padding-top: 20px;
-    padding-bottom: 40px;
-}
 
+html {
+    background: rgba(28, 36, 65, 0.07);
+}
 
 /* Custom container */
 
@@ -45,11 +44,40 @@ body {
 }
 
 .ix-logo {
-    max-width: 130px;
-    max-height: 30px;
+    /*max-width: 220px;*/
+    max-height: 41px;
 }
-/* .ix-page {
-    top: 5em;
-    position: absolute;
-    max-width: inherit;
-} */
+
+.ix-page {
+    top: 7.7em;
+    position: relative;
+} 
+
+.menu-li {
+    margin-left: 0.85em !important;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.2) !important;
+    color: rgb(0, 136, 204) !important;
+}
+
+.menu-li.active {
+    background: rgba(0, 136, 204, 0.9) !important;
+    color: rgb(255,255,255) !important;
+}
+
+.menu-li > a {
+    padding: 15px 15px !important;
+}
+
+nav#ix-nav > div.container {
+    max-width: 875px;
+}
+
+.navbar-brand {
+    margin-left: -55px !important;
+    padding: 3px 15px !important;
+}
+
+.navbar-brand > img {
+    height: unset;
+}

@@ -5,6 +5,7 @@ ix:
   use_logo: true
   peering_email: "peering@monctonix.ca"
   peeringdb_link: "https://peeringdb.com/fac/3785"
+  layout_version: 2
 
 ix_pages: 
   
@@ -24,7 +25,7 @@ ix_pages:
            <p>Traffic exchange is facilitated by BGP (Border Gateway Protocol). Networks must have an AS (Autonomous System) number to announce their routes to each other.</p>"
         - "<h4>Where is MonctonIX?</h4>
            <p>The MonctonIX switch is located at Fibre Center, 770 St George Blvd, Moncton, New Brunswick, E1E 2C6, Canada.</p>
-           <p>PeeringDB: <a href='https://peeringdb.com/fac/3785' /></p>"
+           <p>PeeringDB: <a href='https://peeringdb.com/fac/3785' >https://peeringdb.com/fac/3785</a></p>"
         - "<h4>How much does it cost?</h4>
            <p>Connecting at the locations is subject to agreements with the facilities, but participation is free until 2019.</p>"
         - "<h4>How do we join?</h4>

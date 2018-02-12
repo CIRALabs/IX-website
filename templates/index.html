@@ -1,53 +1,116 @@
 {% extends "_base.html" %}
 
 {% block body %}
-  <div class="container-narrow">
+  {%- if ix.layout_version != 2 -%} {# LOAD VERSION 1 HTML #}
+    <div class="container-narrow">
 
-    {% block navmenu %}
+      {% block navmenu %}
+        {% include 'nav/_menu.html' with context %}
+      {% endblock %}
+
+      <div id="ix-page-home" class="ix-page hidden">
+        {% block ix_page_home %}
+          {% include 'page/ix_home.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-about" class="ix-page hidden">
+        {% block ix_page_about %}
+          {% include 'page/ix_about.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-news" class="ix-page hidden">
+        {% block ix_page_news %}
+          {% include 'page/ix_news.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-locations" class="ix-page hidden">
+        {% block ix_page_locations %}
+          {% include 'page/ix_locations.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-peers" class="ix-page hidden">
+        {% block ix_page_peers %}
+          {% include 'page/ix_peers.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-faq" class="ix-page hidden">
+        {% block ix_page_faq %}
+          {% include 'page/ix_faq.html' with context %}
+        {% endblock %}
+      </div>
+
+      <div id="ix-page-links" class="ix-page hidden">
+        {% block ix_page_links %}
+          {% include 'page/ix_links.html' with context %}
+        {% endblock %}
+      </div>
+
+    </div>
+  {%- else -%} {# LOAD NEW LAYOUT HTML #}
+    <div class="preloader">
+        {{ m_res_import.image(true, "img/loader.gif", "Preloading animation") }}
+    </div>
+    
+    {% block navmenu_v2 %}
       {% include 'nav/_menu.html' with context %}
     {% endblock %}
 
-    <div id="ix-page-home" class="ix-page hidden">
-      {% block ix_page_home %}
-        {% include 'page/ix_home.html' with context %}
-      {% endblock %}
-    </div>
+    <header id="intro">
+        <div class="container">
+          <div class="table">
+            <div class="container-narrow">
+              <div class="container-narrow-anchor"></div>
+              <div id="ix-page-home" class="ix-page hidden">
+                {% block ix_page_home_v2 %}
+                  {% include 'page/ix_home.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-about" class="ix-page hidden">
+                {% block ix_page_about_v2 %}
+                  {% include 'page/ix_about.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-news" class="ix-page hidden">
+                {% block ix_page_news_v2 %}
+                  {% include 'page/ix_news.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-locations" class="ix-page hidden">
+                {% block ix_page_locations_v2 %}
+                  {% include 'page/ix_locations.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-peers" class="ix-page hidden">
+                {% block ix_page_peers_v2 %}
+                  {% include 'page/ix_peers.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-faq" class="ix-page hidden">
+                {% block ix_page_faq_v2 %}
+                  {% include 'page/ix_faq.html' with context %}
+                {% endblock %}
+              </div>
+        
+              <div id="ix-page-links" class="ix-page hidden">
+                {% block ix_page_links_v2 %}
+                  {% include 'page/ix_links.html' with context %}
+                {% endblock %}
+              </div>
+          </div>
+        </div>
+      </div>
+    </header>
 
-    <div id="ix-page-about" class="ix-page hidden">
-      {% block ix_page_about %}
-        {% include 'page/ix_about.html' with context %}
-      {% endblock %}
     </div>
-
-    <div id="ix-page-news" class="ix-page hidden">
-      {% block ix_page_news %}
-        {% include 'page/ix_news.html' with context %}
-      {% endblock %}
-    </div>
-
-    <div id="ix-page-locations" class="ix-page hidden">
-      {% block ix_page_locations %}
-        {% include 'page/ix_locations.html' with context %}
-      {% endblock %}
-    </div>
-
-    <div id="ix-page-peers" class="ix-page hidden">
-      {% block ix_page_peers %}
-        {% include 'page/ix_peers.html' with context %}
-      {% endblock %}
-    </div>
-
-    <div id="ix-page-faq" class="ix-page hidden">
-      {% block ix_page_faq %}
-        {% include 'page/ix_faq.html' with context %}
-      {% endblock %}
-    </div>
-
-    <div id="ix-page-links" class="ix-page hidden">
-      {% block ix_page_links %}
-        {% include 'page/ix_links.html' with context %}
-      {% endblock %}
-    </div>
-
-  </div>
+  {%- endif -%}
 {% endblock %}
