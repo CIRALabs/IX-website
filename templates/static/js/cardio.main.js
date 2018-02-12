@@ -111,7 +111,13 @@ jQuery(function($) {
 
 	$('body').on('click', '.mobile-nav a', function(event) {
 		$('.mobile-nav').removeClass('active');
+		//console.log(this.hash);
 		if(!this.hash) return;
+		
+		ixNav._navAway(200)
+		ixNav._navTo(".menu-li-" + this.hash.substr(1), "#ix-page-" +this.hash.substr(1));
+		return;
+		/* 
 		event.preventDefault();
 		if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 			event.stopPropagation();
@@ -123,7 +129,7 @@ jQuery(function($) {
 				}, 1000);
 				return false;
 			}
-		}
+		}*/
 	});
 
 	$('body').on('click', '.mobile-nav a.close-link', function(event) {

@@ -932,6 +932,7 @@ footer .social-footer li:hover a {
 	z-index: 9999;
 	top: 0;
 	left: 0;
+	margin-top: -2.7em;
 	display: table;
 	width: 100%;
 	height: 100%;
@@ -960,11 +961,12 @@ footer .social-footer li:hover a {
 }
 
 .mobile-nav ul li {
-	margin: 25px 0;
+	margin: 20px 4px 5px 4px !important;
 }
 
 .mobile-nav ul li a:not(.btn) {
-	color: #aaa;
+	color: #ffffff !important;
+	line-height: 2.5em;
 }
 
 .mobile-nav a.close-link {
@@ -974,6 +976,8 @@ footer .social-footer li:hover a {
 	left: calc(50% - 10px);
 	left: 0;
 	width: 100%;
+	margin-bottom: -2em;
+    height: 3.7em;
 	padding: 15px 0;
 	color: #fff;
 	background: #00a8ff;
