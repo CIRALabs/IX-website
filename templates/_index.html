@@ -53,7 +53,12 @@
   <body>
     {% block body %}
     {% endblock %}
-    
+    <!-- Holder for mobile navigation -->
+	  <div class="mobile-nav">
+      <ul>
+      </ul>
+      <a href="#" class="close-link"><i class="arrow_up"></i></a>
+    </div>
     {% block js %}
       {{ m_res_import.js(true, "js/cardio.jquery-1.11.1.min.js") }}
       {{ m_res_import.js(true, "js/cardio.owl.carousel.min.js") }}
