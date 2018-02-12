@@ -44,8 +44,8 @@
 
 {%- macro meta(load_from_static, content='', name='') -%}
   {%- if load_from_static -%}
-    <script content="/static/{{ content }}" name="{{ name }}"></script>
+    <meta content="/static/{{ content }}" name="{{ name }}">
   {%- else -%}
-    <script src="{{ content }}" name="{{ name }}"></script>
+    <meta content="{{ content }}" name="{{ name }}">
   {%- endif -%}
 {%- endmacro -%} 
