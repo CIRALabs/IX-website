@@ -33,6 +33,16 @@ To build into the `www/` directory after modifying the settings/templates accord
 staticjinja build --srcpath=templates --static=static --outpath=www --globals=globals.yaml
 ```
 
-### IXPs currently using IX-website:
+# IXPs currently using IX-website:
 
-* [MonctonIX](monctonix.ca)
+
+
+
+
+
+* [![MonctonIX](http://monctonix.ca/static/img/logo.png)](http://monctonix.ca) 
+
+
+
+
+
