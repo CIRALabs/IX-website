@@ -1,0 +1,3 @@
+templates/*.html linguist-language=html+jinja
+templates/nav/*.html linguist-language=html+jinja
+templates/page/*.html linguist-language=html+jinja
