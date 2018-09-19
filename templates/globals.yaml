@@ -17,6 +17,7 @@ ix_pages:
       qa_elems_num: 6
       questions_answers_v1:
         - "<h4>What is an Internet Exchange?</h4>
+           <iframe width='800' height='375' src='https://www.youtube.com/embed/kjVD4ysXdmk?rel=0&amp;showinfo=0' frameborder='0' allow='autoplay; encrypted-media' allowfullscreen='' style='width: -webkit-fill-available;'></iframe>
            <p>An IX (Internet Exchange) allows networks to interconnect on an open-access ethernet fabric -- providing low-latency, high-bandwidth, cost-effectively, in a locale.</p>"
         - "<h4>What is the benefit?</h4>
            <p>Networks can exchange traffic faster and better. ISPs, transit providers, DNS services, and content networks will congregate -- it is sensible to interconnect locally.</p>"

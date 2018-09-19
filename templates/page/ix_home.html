@@ -3,8 +3,7 @@
 {% block titlegraph %}
 <div class="center-ix-display">
   <h4>{{ ix.shortname }}: {{ ix.location }} Internet Exchange</h4>
-  <iframe width="800" height="375" src="https://www.youtube.com/embed/kjVD4ysXdmk?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen="" style="width: -webkit-fill-available;"></iframe>
-  {% if ix_pages.ix_home.header_element.center_ix_display.graph %}
+    {% if ix_pages.ix_home.header_element.center_ix_display.graph %}
     {{ m_res_import.image(true, "graph/e_week.png", "Weekly Graph") }}
   {% endif %}
 </div>
