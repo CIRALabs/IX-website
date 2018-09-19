@@ -1,15 +1,18 @@
+{% import '_macros_res_imports.html' as m_res_import with context %}
+
 {% block ixp_locations %}
 <div class="marketing">
   
-  <h4><a href="http://fibrecentre.com">Fiber Center </a></h4>
+  <h4><a href="{{ ix_pages.ix_locations.location_elem_1.url }}">{{ ix_pages.ix_locations.location_elem_1.title }}</a></h4>
   <ul>
-    <li>770 St George Blvd, Moncton, New Brunswick, E1E 2C6.</li>
-    <li>Facility contact: <a mailto="info@monctonix.ca">info@monctonix.ca</a></li>
+    <li>{{ ix_pages.ix_locations.location_elem_1.address }}</li>
+    <li>Facility contact: <a mailto="{{ ix_pages.ix_locations.location_elem_1.email }}">{{ ix_pages.ix_locations.location_elem_1.email }}</a></li>
   </ul>
   
+  {%- if ix_pages.ix_locations.display_locations_map == true %}
   <center>
-    <!--<img src="ix-map.jpg">-->
+    {{ m_res_import.image(true, "ix-map.jpg", "Map of Internet Exchange Points") }}
   </center>
-  
+  {% endif -%}
 </div>
 {% endblock %}
