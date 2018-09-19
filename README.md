@@ -17,6 +17,7 @@ We are planning to make the entire website content configurable through the `glo
 
 * Logos settings, contact emails, name, URL
 * `ix_home.html` content
+* `ix_locations.html` content
 
 
 #### Modifying HTML content
